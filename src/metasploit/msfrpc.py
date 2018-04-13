@@ -1330,7 +1330,7 @@ class MsfModule(object):
         self._info = rpc.call(MsfRpcMethod.ModuleInfo, mtype, mname)
         property_attributes = ["advanced", "evasion", "options", "required", "runoptions"]
         for k in self._info:
-            if k not in propery_attributes):
+            if(k not in property_attributes):
                 setattr(self, k, self._info.get(k))
         self._moptions = rpc.call(MsfRpcMethod.ModuleOptions, mtype, mname)
         self._roptions = []
